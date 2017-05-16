@@ -1,0 +1,17 @@
+.quote {
+	&__body {
+		@extend .h4;
+		margin: 0;
+	}
+
+	&__author,
+	&__organisation {
+		@extend .small-text;
+		margin: 0;
+	}
+
+	&__author {
+		font-weight: normal;
+		margin-bottom: 0.69em;
+	}
+}

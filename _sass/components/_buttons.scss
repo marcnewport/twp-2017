@@ -1,0 +1,60 @@
+.btn {
+	cursor: pointer;
+	background-color: transparent;
+	font-family: $small-font-family;
+	font-size: $small-font-size;
+	line-height: 1;
+	padding: 1.2rem 2.75rem;
+	color: $text-color;
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+	transition: color 0.3s;
+
+	&--primary {
+		border: 2px solid $primary-color;
+
+		span {
+			position: relative;
+			z-index: 2;
+		}
+
+		&:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			right: 0;
+			background: $primary-color;
+			transform: scale(0, 1);
+			transform-origin: right center;
+			transition: transform 0.4s;
+		}
+
+		&:hover {
+			color: $text-color-inverted;
+
+			&:before {
+				transform: scale(1, 1);
+				transform-origin: left center;
+			}
+		}
+	}
+
+	&--wide {
+		padding: 1.2rem 5.5rem;
+	}
+
+	&--header,
+	&--menu {
+		border-color: transparent;
+		background-color: transparent;
+		padding: 0.2rem;
+
+		&:hover {
+			background-color: transparent;
+			color: $link-color-hover;
+		}
+	}
+}

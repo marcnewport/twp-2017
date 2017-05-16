@@ -1,0 +1,45 @@
+.main--about {
+
+	.testimonials {
+
+		.quotes {
+			@include span(10);
+			@include squish(1);
+		}
+
+		.slick-dots {
+			text-align: right;
+
+			li {
+				margin: 0;
+			}
+		}
+	}
+
+	.testimonials,
+	.team,
+	.actions {
+		padding-bottom: $margin-xl;
+	}
+
+	.team h3 {
+		@include span(10);
+		@include squish(1);
+		float: none;
+	}
+
+	.slick-arrow {
+		top: 38%;
+	}
+
+	@include media(xs) {
+
+		.slick-prev {
+			left: -15px;
+		}
+
+		.slick-next {
+			right: -15px;
+		}
+	}
+}

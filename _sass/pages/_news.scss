@@ -1,0 +1,14 @@
+.main--news {
+
+	.main__title h2 {
+		margin: 0;
+	}
+
+	& > .container + .card {
+		padding-top: $margin-lg;
+	}
+
+	.card {
+		padding: $margin-lg 0;
+	}
+}

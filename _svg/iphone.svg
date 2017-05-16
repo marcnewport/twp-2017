@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="270px" height="519px" viewBox="0 0 270 519" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.1 (39012) - http://www.bohemiancoding.com/sketch -->
+    <title>iphone</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Desktop" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Project-Detail" transform="translate(-235.000000, -2933.000000)">
+            <g id="Group-10" transform="translate(235.000000, 2933.000000)">
+                <g id="Group-8">
+                    <g id="iphone">
+                        <path d="M0,36.9961215 C0,16.5637278 16.559149,0 36.9938601,0 L233.00614,0 C253.437285,0 270,16.5700601 270,36.9961215 L270,481.403879 C270,501.836272 253.440851,518.4 233.00614,518.4 L36.9938601,518.4 C16.5627153,518.4 0,501.82994 0,481.403879 L0,36.9961215 Z M13.5,63.2083616 L13.5,454.291638 C13.5,455.398877 14.3973517,456.3 15.5042912,456.3 L253.840722,456.3 C254.943242,456.3 255.845013,455.400826 255.845013,454.291638 L255.845013,63.2083616 C255.845013,62.1011233 254.947662,61.2 253.840722,61.2 L15.5042912,61.2 C14.4017713,61.2 13.5,62.0991741 13.5,63.2083616 Z" id="Combined-Shape" fill="#F2F1F1"></path>
+                        <ellipse id="Oval-3" fill="#F9F9F9" cx="135.9" cy="486.9" rx="17.1" ry="17.1"></ellipse>
+                        <rect id="Rectangle-7" fill="#F9F9F9" x="108.9" y="29.7" width="52.2" height="6.3" rx="3.15"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

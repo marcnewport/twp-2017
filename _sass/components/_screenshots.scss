@@ -1,0 +1,57 @@
+.screenshot {
+	position: relative;
+	width: 83%;
+	margin: auto;
+	overflow: hidden;
+
+	@include media(xs) {
+		width: 100%;
+		margin-bottom: $margin-md;
+	}
+
+	svg {
+		float: left;
+		position: relative;
+		z-index: 2;
+	}
+
+	&--mobile {
+
+		img {
+			position: absolute;
+			top: 11.7%;
+			left: 5%;
+			width: 90%;
+		}
+	}
+
+	&--half-width {
+		width: 48%;
+		float: left;
+		margin-right: 2%;
+
+		&:last-child {
+			margin: 0 0 0 2%;
+		}
+
+		@include media(xs) {
+			width: 100%;
+			margin-bottom: $margin-md;
+		}
+	}
+
+	&--third-width {
+		width: 20%;
+		float: left;
+		margin: 0 4%;
+
+		&:first-child {
+			margin-left: 12%;
+		}
+
+		@include media(xs) {
+			width: 60%;
+			margin: 0 20% $margin-md 20% !important;
+		}
+	}
+}

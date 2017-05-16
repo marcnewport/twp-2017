@@ -1,0 +1,14 @@
+.member {
+	text-align: center;
+
+	&__name,
+	&__role {
+		@extend .small-text;
+		margin: 0;
+	}
+
+	&__name {
+		font-weight: normal;
+		margin: 0.69em 0;
+	}
+}

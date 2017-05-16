@@ -1,0 +1,114 @@
+.filter {
+	margin-top: $margin-md;
+	@include span(12);
+
+	&__label {
+		display: none;
+		@extend .small-text;
+		font-weight: $font-weight-regular;
+		padding: 1em;
+		border: 2px solid $text-color;
+		cursor: pointer;
+
+		svg {
+			position: absolute;
+			right: 1em;
+			top: 1.7em;
+		}
+	}
+
+	ul {
+		@extend .unstyled-list;
+		display: flex;
+		justify-content: center;
+
+		li {
+			margin: 0 $margin-sm;
+		}
+	}
+
+	button {
+		@extend .small-text;
+		border: none;
+		background-color: transparent;
+		padding: 0.2rem;
+		cursor: pointer;
+		position: relative;
+		z-index: 1;
+
+		&:before {
+			content: '';
+			display: inline-block;
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 2px;
+			height: 2px;
+			background-color: $link-underline-color;
+			z-index: -1;
+			transform: scale(0, 1);
+			transform-origin: right center;
+			transition: transform 0.4s;
+		}
+
+		&.active {
+			&:before {
+				transform: scale(1, 1);
+				transform-origin: left center;
+			}
+		}
+
+		&:hover {
+			color: $link-color-hover;
+		}
+	}
+
+	@include media(xs) {
+		@include span(6);
+		@include squish(3);
+		position: relative;
+
+		.filter__label {
+			display: block;
+		}
+
+		ul {
+			display: none;
+			border: 2px solid $text-color;
+			margin-top: -2px;
+			position: absolute;
+			z-index: 2;
+			box-sizing: border-box;
+			width: 100%;
+
+			li {
+				margin: 0;
+			}
+		}
+
+		button {
+			border: none;
+			padding: 1em;
+			text-align: left;
+			background-color: $background-color;
+			width: 100%;
+
+			&:before {
+				display: none;
+			}
+
+			&:hover {
+				background-color: $mid-grey;
+				color: $text-color;
+			}
+
+			&.active {
+				background-color: $mid-grey;
+			}
+		}
+	}
+}
+
+.filter-hide {
+	display: none;
+}

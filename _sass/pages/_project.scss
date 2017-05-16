@@ -1,0 +1,49 @@
+.main--project {
+
+	.project {
+		padding-top: $margin-md;
+	}
+
+	.project__title {
+		@include span(10);
+		@include squish(1);
+	}
+
+	.project__details {
+		@include span(8);
+		@include pre(1);
+		margin-bottom: $margin-xl;
+
+		@include media(xs) {
+			@include span(10);
+			@include squish(1);
+			margin-bottom: $margin-md;
+		}
+	}
+
+	.project__deliverables {
+		@include span(2);
+		margin-left: gutter();
+		@extend .small-text;
+
+		@include media(xs) {
+			@include span(10);
+			@include squish(1);
+			margin-bottom: $margin-xl;
+		}
+
+		p:first-child {
+			font-weight: $font-weight-bold;
+			margin: 0;
+		}
+
+		ul {
+			@extend .unstyled-list;
+			margin: 0.7em 0;
+		}
+	}
+
+	.testimonials {
+		padding: $margin-xl 0;
+	}
+}

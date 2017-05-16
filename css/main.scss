@@ -3,50 +3,53 @@
 ---
 @charset "utf-8";
 
-
-
-// Our variables
-$base-font-family: Helvetica, Arial, sans-serif;
-$base-font-size:   16px;
-$small-font-size:  $base-font-size * 0.875;
-$base-line-height: 1.5;
-
-$spacing-unit:     30px;
-
-$text-color:       #111;
-$background-color: #fdfdfd;
-$brand-color:      #2a7ae2;
-
-$grey-color:       #828282;
-$grey-color-light: lighten($grey-color, 40%);
-$grey-color-dark:  darken($grey-color, 25%);
-
-// Width of the content area
-$content-width:    800px;
-
-$on-palm:          600px;
-$on-laptop:        800px;
-
-
-
-// Using media queries with like this:
-// @include media-query($on-palm) {
-//     .wrapper {
-//         padding-right: $spacing-unit / 2;
-//         padding-left: $spacing-unit / 2;
-//     }
-// }
-@mixin media-query($device) {
-    @media screen and (max-width: $device) {
-        @content;
-    }
-}
-
-
-
 // Import partials from `sass_dir` (defaults to `_sass`)
 @import
-        "base",
-        "layout",
-        "syntax-highlighting"
+    // Import base bower components
+    "../bower_components/susy/sass/susy",
+    "../bower_components/slick-carousel/slick/slick.scss",
+
+    // Load fonts so variables can use them
+    "base/fonts",
+
+    // Helpers (files that won’t be compiled)
+    "./helpers/variables",
+    "./helpers/mixins",
+
+    // Import bower component themes
+    "../bower_components/slick-carousel/slick/slick-theme.scss",
+
+    // Base styles
+    "base/reset",
+    "base/utility",
+    "base/typography",
+
+    // Layout (macro styles)
+    "layout/grids",
+    "layout/header",
+    "layout/footer",
+    "layout/menu",
+    "layout/main",
+    "layout/gallery",
+
+    // Components (micro styles)
+    "components/buttons",
+    "components/cards",
+    "components/quotes",
+    "components/members",
+    "components/actions",
+    "components/screenshots",
+    "components/filter",
+    "components/syntax-highlighting",
+
+    // Page specific styles
+    "pages/home",
+    "pages/about",
+    "pages/projects",
+    "pages/project",
+    "pages/news",
+    "pages/article",
+    "pages/contact",
+    "pages/jobs",
+    "pages/event"
 ;

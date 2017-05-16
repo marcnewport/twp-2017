@@ -1,0 +1,10 @@
+.main--projects {
+
+	.main__title h2 {
+		margin: 0;
+	}
+
+	& > .container + .card {
+		padding-top: $margin-lg;
+	}
+}

@@ -1,0 +1,77 @@
+@mixin media($size) {
+
+	@if $size == xs {
+		@media screen and (max-width: map-get($breakpoint, xs)) {
+			@content;
+		}
+	}
+	@else if $size == sm {
+		@media screen and (max-width: map-get($breakpoint, sm)) {
+			@content;
+		}
+	}
+	@else if $size == md {
+		@media screen and (max-width: map-get($breakpoint, md)) {
+			@content;
+		}
+	}
+	@else if $size == lg {
+		@media screen and (max-width: map-get($breakpoint, lg)) {
+			@content;
+		}
+	}
+	@else if $size == xl {
+		@media screen and (min-width: map-get($breakpoint, lg) + 1) {
+			@content;
+		}
+	}
+	@else {
+		 @warn "Media mixin supports: xs, sm, md, lg, xl";
+	}
+}
+
+@mixin fancy-link($fg-color, $bg-color, $ul-color, $underline-size: 1px, $underline: true) {
+
+	$start-scale: scale(1, 1);
+	$end-scale: scale(0, 1);
+	$start-origin: left center;
+	$end-origin: right center;
+
+	@if $underline != true {
+		$start-scale: scale(0, 1);
+		$end-scale: scale(1, 1);
+		$start-origin: right center;
+		$end-origin: left center;
+	}
+
+	color: $fg-color;
+	position: relative;
+	z-index: 1;
+	text-shadow: 1px 1px $bg-color,
+				1px -1px $bg-color,
+				-1px 1px $bg-color,
+				-1px -1px $bg-color;
+
+	&:before {
+		content: '';
+		display: inline-block;
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 2px;
+		height: $underline-size;
+		background-color: $ul-color;
+		z-index: -1;
+		transform: $start-scale;
+		transform-origin: $start-origin;
+		transition: transform 0.4s;
+	}
+
+	&.active,
+	&:hover {
+		&:before {
+			transform: $end-scale;
+			transform-origin: $end-origin;
+		}
+	}
+}

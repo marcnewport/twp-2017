@@ -1,0 +1,110 @@
+.footer {
+	color: $text-color-inverted;
+	background-color: $background-color-inverted;
+	padding: 7.8rem 0;
+
+	a {
+		color: $text-color-inverted;
+	}
+
+	&__title {
+		@include span(6);
+		@include squish(0);
+
+		a {
+			font-family: inherit;
+			text-decoration: underline;
+			text-decoration-color: $dark-grey;
+
+			// @include fancy-link(
+			// 	$text-color-inverted,
+			// 	$background-color-inverted,
+			// 	$link-underline-color,
+			// 	2px
+			// );
+		}
+
+		@include media(xs) {
+			@include span(12);
+		}
+	}
+
+	&__icon {
+		@include span(6);
+		@include squish(0);
+
+		svg {
+			float: right;
+		}
+
+		@include media(xs) {
+			@include span(12);
+		}
+	}
+
+	&__addresses {
+		@include span(6);
+		@include squish(0, 6);
+		@extend .small-text;
+		margin-top: $margin-lg;
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+		}
+
+		.address {
+			width: 50%;
+			float: left;
+
+			&__location {
+				font-weight: $font-weight-regular;
+				margin-bottom: 0.5em;
+			}
+		}
+
+		margin-bottom: $margin-md;
+	}
+
+	&__links {
+		@include span(6);
+		@include squish(0, 6);
+		@extend .small-text;
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+		}
+
+		ul {
+			@extend .unstyled-list;
+
+			li {
+				float: left;
+				margin: 0 2em 0 0;
+			}
+		}
+
+		a {
+			text-decoration: none;
+			font-weight: $font-weight-regular;
+
+			@include fancy-link(
+				$text-color-inverted,
+				$background-color-inverted,
+				$link-underline-color,
+				1px,
+				false
+			);
+
+			// &:hover {
+			// 	text-decoration: underline;
+			// 	text-decoration-color: $dark-grey;
+			// }
+		}
+	}
+}
+
+.svg-sprite {
+	display: none;
+}

@@ -1,0 +1,86 @@
+// Colors
+////////////////////////////////////////////////////////////////////////////////
+$black: #221f20;
+$white: #ffffff;
+$grey: #f8f8f8;
+$mid-grey: #F4F3F3;
+$dark-grey: #838383;
+
+$primary-color: $black;
+$secondary-color: $grey;
+
+$text-color: $black;
+$background-color: $white;
+
+$text-color-inverted: $white;
+$background-color-inverted: $black;
+
+$link-color: $primary-color;
+$link-color-hover: lighten($link-color, 50%);
+$link-underline-color: $link-color-hover;
+
+
+// Breakpoints
+////////////////////////////////////////////////////////////////////////////////
+// Define the end width of the break point
+$breakpoint: (
+	'xs': 767px,
+	'sm': 999px,
+	'md': 1259px,
+	'lg': 1919px
+);
+
+
+// Margins
+////////////////////////////////////////////////////////////////////////////////
+$margin: 2rem; //32px
+
+$margin-sm: $margin / 2;
+$margin-md: $margin;
+$margin-lg: $margin * 2;
+$margin-xl: $margin * 4;
+$margin-xxl: $margin * 6;
+
+
+// Typography
+////////////////////////////////////////////////////////////////////////////////
+$title-font-family: 'GT Pressura Trial';
+$subtitle-font-family: 'GT Pressura Mono Trial';
+$body-font-family: 'GT Eesti Pro Display Trial';
+$small-font-family: 'GT Pressura Mono Trial';
+
+$font-weight-bold: bold;
+$font-weight-regular: normal;
+$font-weight-light: 300;
+
+// 4.375em = 70px
+$h1-font-size: 4.375em;
+$h1-font-size-mobile: 3em;
+// 3.125em = 50px
+$h2-font-size: 3.125em;
+$h2-font-size-mobile: 2em;
+// 2.5em = 40px
+$h3-font-size: 2.5em;
+$h3-font-size-mobile: 1.75em;
+// 1.8em = 30px
+$h4-font-size: 1.8em;
+$h4-font-size-mobile: 1.45em;
+// 1.5em = 24px
+$h5-font-size: 1.5em;
+$h5-font-size-mobile: 1.25em;
+// 1.125em = 18px
+$h6-font-size: 1.125em;
+$h6-font-size-mobile: 1.125em;
+// 1em = 16px
+$body-font-size: 1em;
+$body-font-size-mobile: 0.95em;
+// 0.875em = 14px
+$small-font-size: 0.875em;
+$small-font-size-mobile: 0.8em;
+
+
+// Slick carousel over rides
+////////////////////////////////////////////////////////////////////////////////
+$slick-dot-size: 6px;
+$slick-prev-character: '';
+$slick-next-character: '';

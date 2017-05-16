@@ -1,0 +1,28 @@
+.main--contact {
+
+	.main__content {
+		@include span(4);
+		@include squish(1);
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+			padding-bottom: $margin-md;
+		}
+	}
+
+	.address {
+		@include span(2);
+		@include post(1);
+
+		@include media(xs) {
+			@include span(6);
+			@include squish(3);
+			margin-top: $margin-lg;
+		}
+	}
+
+	.actions {
+		padding: $margin-xl 0;
+	}
+}

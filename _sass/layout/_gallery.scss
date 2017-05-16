@@ -1,0 +1,125 @@
+.gallery {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: auto;
+	z-index: 1000;
+	transform: translateY(-100%);
+
+	&__blocker {
+		background-color: $black;
+		opacity: 0;
+		transition: opacity 0.8s;
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+	}
+
+	&__container {
+		position: relative;
+		background-color: $background-color;
+		padding: $margin-lg 0;
+		overflow: hidden;
+		transform: translateY(-100%);
+		transition: transform 0.5s;
+		transition-timing-function: cubic-bezier(0.8, -0.2, 0.1, 1.1);
+		// Border and margin to widen element for animation
+		border-top: $margin-xl solid $background-color;
+		margin-top: -$margin-xl;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: $margin-md;
+
+		a {
+			@include fancy-link(
+				$link-color,
+				$background-color,
+				$link-underline-color
+			);
+		}
+	}
+
+	.hide-gallery {
+		position: absolute;
+		top: $margin-sm;
+		right: $margin-sm;
+		margin-right: 30px;
+
+		span {
+			font-size: $h4-font-size;
+			font-weight: $font-weight-bold;
+			line-height: 0.6;
+		}
+	}
+
+	&__list {
+		@include span(12);
+
+		.slick-arrow {
+			top: 38%;
+		}
+	}
+
+	&--show {
+		transform: translateY(0);
+
+		.gallery__blocker {
+			opacity: 0.6;
+		}
+
+		.gallery__container {
+			transform: translateY(0);
+		}
+	}
+
+	&--hide {
+		transform: translateY(0);
+
+		.gallery__blocker {
+			opacity: 0;
+		}
+
+		.gallery__container {
+			transform: translateY(-100%);
+		}
+	}
+}
+
+.gallery-item {
+	margin: 0 $margin-sm;
+	cursor: pointer;
+	color: $text-color;
+
+	&__thumb {
+		margin-bottom: $margin-sm;
+	}
+
+	&__title {
+		font-weight: $font-weight-bold;
+	}
+
+	&__title,
+	&__category {
+		@extend .small-text;
+	}
+
+	@include media(xs) {
+		width: 46%;
+		margin: 3% 3% 6%;
+		float: left;
+
+		&:nth-child(odd) {
+			margin-left: 0;
+		}
+
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+}

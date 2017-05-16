@@ -1,0 +1,141 @@
+body,
+html {
+	font-family: $body-font-family;
+	font-size: 100%;
+	font-weight: $font-weight-light;
+	line-height: 1.9;
+	color: $text-color;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	@include media(xs) {
+		font-size: $body-font-size-mobile;
+	}
+}
+
+.h1,
+h1 {
+	font-size: $h1-font-size;
+	font-family: $title-font-family;
+	font-weight: $font-weight-bold;
+	line-height: 1.38;
+	letter-spacing: -0.057em;
+	margin-top: 0;
+
+	@include media(xs) {
+		font-size: $h1-font-size-mobile;
+	}
+}
+
+.h2,
+h2 {
+	font-size: $h2-font-size;
+	font-family: $subtitle-font-family;
+	font-weight: $font-weight-bold;
+	line-height: 1.38;
+	letter-spacing: -0.078em;
+	margin-top: 0;
+
+	@include media(xs) {
+		font-size: $h2-font-size-mobile;
+	}
+}
+
+.h3,
+h3 {
+	font-size: $h3-font-size;
+	font-family: $title-font-family;
+	font-weight: $font-weight-bold;
+	line-height: 1.38;
+	margin: 0 0 1.38em;
+
+	@include media(xs) {
+		font-size: $h3-font-size-mobile;
+	}
+}
+
+.h4,
+h4 {
+	font-size: $h4-font-size;
+	font-family: $subtitle-font-family;
+	font-weight: $font-weight-bold;
+	line-height: 1.38;
+	letter-spacing: -0.04em;
+	margin: 0 0 1.38em;
+
+	@include media(xs) {
+		font-size: $h4-font-size-mobile;
+	}
+}
+
+.h5,
+h5 {
+	font-size: $h5-font-size;
+	font-family: $title-font-family;
+	font-weight: $font-weight-bold;
+	line-height: 1.38;
+	margin: 0 0 1.38em;
+
+	@include media(xs) {
+		font-size: $h5-font-size-mobile;
+	}
+}
+
+.h6,
+h6 {
+	font-size: $h6-font-size;
+	font-family: $body-font-family;
+	font-weight: $font-weight-regular;
+	line-height: 1.38;
+	margin: 0 0 1.38em;
+
+	@include media(xs) {
+		font-size: $h6-font-size-mobile;
+	}
+}
+
+.h7 {
+	font-size: $body-font-size;
+	font-family: $body-font-family;
+	font-weight: $font-weight-regular;
+	line-height: 1.38;
+	margin: 0 0 1.38em;
+	color: $dark-grey;
+
+	@include media(xs) {
+		font-size: $body-font-size-mobile;
+	}
+}
+
+p {
+	margin: 0 0 1.9em;
+}
+
+ul,
+ol {
+	line-height: 2;
+	margin: 0 0 1.9em;
+}
+
+.unstyled-list {
+	list-style: none;
+	margin-left: 0;
+	padding: 0;
+	-webkit-padding-start: 0;
+}
+
+a {
+	font-family: $small-font-family;
+	text-decoration: none;
+}
+
+.small-text {
+	font-size: $small-font-size;
+	font-family: $small-font-family;
+	line-height: 1.5;
+
+	@include media(xs) {
+		font-size: $small-font-size-mobile;
+	}
+}

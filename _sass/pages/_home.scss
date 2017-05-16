@@ -1,0 +1,22 @@
+.main--home {
+
+	.main__title {
+		margin: $margin-lg 0;
+		@include span(8);
+		@include squish(2);
+		text-align: left;
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+		}
+	}
+
+	.card--top .card__content p:last-child {
+		margin-bottom: 0;
+	}
+
+	.actions {
+		padding-bottom: $margin-xl;
+	}
+}

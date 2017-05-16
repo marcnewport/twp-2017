@@ -1,0 +1,14 @@
+$susy: (
+	columns: 12,
+	container: 1200px,
+	gutters: .2
+);
+
+.container {
+	@include container;
+
+	@include media(xs) {
+		padding-left: $margin-sm;
+		padding-right: $margin-sm;
+	}
+}

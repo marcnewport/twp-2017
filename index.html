@@ -2,22 +2,67 @@
 layout: default
 ---
 
-<div class="home">
+<main class="main main--home">
+	<div class="container">
+		<div class="main__title">
+			<h2>Welcome to The Working Party. We're a specialist e-commerce design and development agency with offices in Sydney and Melbourne.</h2>
+		</div>
+	</div>
 
-  <h1 class="page-heading">Posts</h1>
+	<div class="card card--image-top">
+		<div class="container">
+			<div class="card__image">
+				<img src="assets/home-img-1.jpg" alt="">
+			</div>
+			<div class="card__content card__content--wide">
+				<p class="h4">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+			</div>
+		</div>
+	</div>
 
-  <ul class="post-list">
-    {% for post in site.posts %}
-      <li>
-        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+	<div class="card card--highlight card--image-right">
+		<div class="container">
+			<div class="card__image">
+				<img src="assets/home-img-2.jpg" alt="">
+			</div>
+			<div class="card__content">
+				<h3 class="h5">Youfoodz just launched!</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p><a href="project.html">View case study</a></p>
+			</div>
+		</div>
+	</div>
 
-        <h2>
-          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
-        </h2>
-      </li>
-    {% endfor %}
-  </ul>
+	<div class="card">
+		<div class="container">
+			<div class="card__image">
+				<img src="assets/home-img-3.jpg" alt="">
+			</div>
+			<div class="card__content">
+				<h3 class="h5">Move from Magento to Shopify Plus</h3>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+				<p><a href="article.html">Learn more</a></p>
+			</div>
+		</div>
+	</div>
 
-  <p class="rss-subscribe">subscribe <a href="{{ "/feed.xml" | prepend: site.baseurl }}">via RSS</a></p>
 
-</div>
+
+	<div class="actions">
+		<div class="container">
+			<div class="action action--email">
+				<div class="action__step"><span>01</span> Getting started</div>
+				<div class="action__title">
+					<h2 class="h3">Have a project for us?</h2>
+				</div>
+				<div class="action__description">
+					<p>Amazing. Then we should talk. Use this inquiry guide to get in touch, or drop us an email at <a href="mailto:hello@theworkingparty.melbourne">hello@theworkingparty.melbourne</a></p>
+				</div>
+				<div class="action__link">
+					<p><br><a href="#">Let's go</a></p>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>

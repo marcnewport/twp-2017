@@ -1,0 +1,73 @@
+.menu {
+	background: $background-color-inverted;
+	color: $text-color-inverted;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 900;
+	top: 0;
+	left: 0;
+	transform: translateX(100%);
+	opacity: 0;
+	transition: opacity, transform 0.5s;
+	transition-timing-function: cubic-bezier(0.8, -0.2, 0.1, 1.1);
+	// Border and margin to widen element for animation
+	border-right: $margin-xl solid $background-color-inverted;
+	margin-right: -$margin-xl;
+
+	&--show {
+		transform: translateX(0);
+		opacity: 1;
+	}
+
+	&--hide {
+		opacity: 1;
+		transform: translateX(100%);
+	}
+
+	&__close.btn {
+		position: absolute;
+		top: $margin-sm;
+		right: $margin-sm;
+		color: $text-color-inverted;
+
+		span {
+			font-size: $h4-font-size;
+			font-weight: $font-weight-bold;
+			line-height: 0.6;
+		}
+	}
+
+	&__links {
+		width: 100%;
+		height: 100%;
+		display: flex;
+		text-align: center;
+		justify-content: center;
+		align-items: center;
+
+		&-list {
+			@extend .h2;
+			list-style: none;
+			margin-bottom: $margin-sm;
+
+			a:not(.btn) {
+				@include fancy-link(
+					$text-color-inverted,
+					$background-color-inverted,
+					$link-underline-color,
+					3px,
+					false
+				);
+			}
+
+			&--small {
+				font-family: $small-font-family;
+				font-size: $body-font-size;
+				font-weight: $font-weight-regular;
+				margin-top: $margin-md;
+			}
+		}
+	}
+}

@@ -1,0 +1,14 @@
+.main--jobs {
+
+	.card--image-none {
+		padding-top: 0;
+
+		.card__content {
+
+			@include media(xs) {
+				@include span(12);
+				@include squish(0);
+			}
+		}
+	}
+}

@@ -1,0 +1,142 @@
+.card {
+	@include break;
+	padding: $margin-xl 0;
+	overflow: hidden;
+
+	&__date {
+		@extend .small-text;
+	}
+
+	&__image {
+		@include span(6);
+		transition-delay: 0.3s;
+
+		img {
+			width: 100%;
+			float: left;
+		}
+	}
+
+	&__content {
+		@include span(4);
+		@include pre(1);
+		@include post(1);
+		transition-delay: 0.6s;
+	}
+
+	// Animation for easeing in of cards
+	&__image,
+	&__content {
+		transform: translateY(30px);
+		opacity: 0.5;
+		transition-property: transform, opacity;
+		transition-duration: 1.2s;
+
+		&.easein {
+			transform: translateY(0);
+			opacity: 1;
+		}
+	}
+
+	&__link-list {
+		list-style: none;
+		padding-left: 0;
+	}
+
+	&--image-right {
+		.card__image {
+			float: right;
+			transition-delay: 0.6s;
+		}
+
+		.card__content {
+			transition-delay: 0.3s;
+		}
+	}
+
+	&--image-top {
+		padding-top: 0;
+
+		.card__image {
+			@include span(12);
+			padding-bottom: $margin-lg;
+		}
+
+		.card__content {
+			@include span(8);
+			@include squish(2);
+
+			&--wide {
+				@include span(10);
+				@include squish(1);
+			}
+		}
+	}
+
+	&--image-none {
+
+		.card__content {
+			@include span(8);
+			@include squish(2);
+		}
+	}
+
+	&--highlight {
+		background-color: $secondary-color;
+		padding-top: $margin-xl !important;
+
+		+ .card {
+			padding-top: $margin-xl;
+		}
+	}
+
+	&--event {
+		padding: $margin-lg 0;
+
+		.card__image {
+			@include span(3);
+			@include squish(1);
+		}
+
+		.card__content {
+			@include span(6);
+			@include squish(0, 1);
+		}
+	}
+
+	&--speaker {
+		padding: $margin-md 0;
+
+		.card__image {
+			@include span(2);
+			@include squish(1);
+		}
+
+		.card__content {
+			@include span(7);
+			@include squish(0, 1);
+
+			h4 {
+				margin: 0;
+			}
+		}
+	}
+}
+
+@include media(xs) {
+
+	.card {
+		padding: $margin-lg 0;
+
+		&__image {
+			@include span(12);
+			margin-bottom: $margin-md;
+			transition-delay: 0s !important;
+		}
+
+		&__content {
+			@include span(12);
+			transition-delay: 0s !important;
+		}
+	}
+}

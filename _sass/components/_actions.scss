@@ -1,0 +1,60 @@
+.action {
+	overflow: hidden;
+	background-color: $secondary-color;
+	padding: $margin-lg 0 $margin-md 0;
+
+	&__step {
+		@include squish(1);
+		@include span(10);
+		@extend .small-text;
+		margin-bottom: $margin-lg;
+
+		span {
+			font-weight: $font-weight-regular;
+			margin-right: 1em;
+		}
+	}
+
+	&__title {
+		@include squish(1);
+		@include span(10);
+	}
+
+	&__description {
+		@include pre(1);
+		@include span(5);
+	}
+
+	&__link {
+		@include span(5);
+		@include post(1);
+
+		display: flex;
+		justify-content: flex-end;
+		align-items: flex-end;
+	}
+}
+
+@include media(xs) {
+	.action {
+
+		&__title {
+			@include squish(1);
+			@include span(10);
+		}
+
+		&__description {
+			@include squish(1);
+			@include span(10);
+		}
+
+		&__link {
+			@include squish(1);
+			@include span(10);
+
+			display: flex;
+			justify-content: flex-end;
+			align-items: flex-end;
+		}
+	}
+}

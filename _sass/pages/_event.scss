@@ -1,0 +1,128 @@
+.event {
+	padding: $margin-md 0 0;
+
+	&__details {
+		@include span(5);
+		@include pre(1);
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+		}
+	}
+
+	&__date {
+		@extend .h6;
+	}
+
+	&__title h2 {
+		margin-bottom: $margin-md;
+	}
+
+	&__inner-details {
+		@extend .small-text;
+
+		div {
+			margin-bottom: $margin-sm;
+
+			&:nth-child(odd) {
+				@include span(2 of 5);
+			}
+
+			&:nth-child(even) {
+				@include span(3 of 5);
+				margin-right: 0;
+			}
+		}
+
+		h3 {
+			@extend .small-text;
+			font-weight: $font-weight-regular;
+			margin-bottom: 0.8em;
+		}
+	}
+
+	&__share {
+		ul {
+			@extend .unstyled-list;
+
+			li {
+				margin: 0 $margin-sm 0 0;
+				float: left;
+
+				a:before {
+					display: none !important;
+				}
+			}
+		}
+	}
+
+	&__image {
+		@include span(4);
+		@include squish(1);
+
+		@include media(xs) {
+			@include span(10);
+			@include squish(1);
+			margin-top: $margin-lg;
+		}
+	}
+
+	&__statement {
+		@include span(10);
+		@include squish(1);
+		@extend .h4;
+		padding-top: $margin-lg;
+
+		@include media(xs) {
+			@include span(12);
+			@include squish(0);
+		}
+	}
+
+	&__description {
+		@include span(8);
+		@include squish(2);
+		margin-bottom: $margin-lg;
+
+		@include media(xs) {
+			@include span(10);
+			@include squish(1);
+		}
+	}
+}
+
+.speakers {
+	padding: $margin-lg 0;
+	background-color: $secondary-color;
+
+	&__title {
+		@include span(10);
+		@include squish(1);
+	}
+}
+
+.sponsors {
+	padding: $margin-lg 0;
+
+	&__title {
+		@include span(2);
+		@include squish(1);
+		@extend .small-text;
+		font-weight: $font-weight-regular;
+	}
+
+	&__logos {
+		@include span(7);
+		@include squish(0, 1);
+
+		ul {
+			@extend .unstyled-list;
+
+			li {
+				float: left;
+				margin-right: $margin-lg;
+			}
+		}
+	}
+}
