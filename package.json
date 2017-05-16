@@ -7,22 +7,16 @@
     "type": "git",
     "url": "git+https://github.com/marcnewport/twp-2017.git"
   },
-  "author": "",
-  "license": "",
+  "author": "marcnewport@gmail.com",
+  "license": "UNLICENSED",
   "devDependencies": {
     "browser-sync": "^2.18.8",
-    "del": "^2.2.2",
     "gulp": "^3.9.1",
     "gulp-browserify": "^0.5.1",
     "gulp-concat": "^2.6.1",
-    "gulp-file-include": "^1.1.0",
     "gulp-rename": "^1.2.2",
-    "gulp-sass": "^3.1.0",
-    "gulp-shell": "^0.6.3",
-    "gulp-sourcemaps": "^2.6.0",
     "gulp-svgmin": "^1.2.3",
     "gulp-svgstore": "^6.1.0",
-    "run-sequence": "^1.2.2",
-    "ttab": "^0.5.1"
+    "run-sequence": "^1.2.2"
   }
 }

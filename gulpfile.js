@@ -2,15 +2,10 @@ var gulp = require('gulp');
 var svgmin = require('gulp-svgmin');
 var svgstore = require('gulp-svgstore');
 var rename = require('gulp-rename');
-var fileinclude = require('gulp-file-include');
-var sourcemaps = require('gulp-sourcemaps');
-var sass = require('gulp-sass');
 var concat = require('gulp-concat');
 var browserify = require('gulp-browserify');
 var browserSync = require('browser-sync').create();
-var del = require('del');
 var runSequence = require('run-sequence');
-var shell = require('gulp-shell');
 var cp = require('child_process');
 
 
