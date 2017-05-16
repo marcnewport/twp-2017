@@ -1,5 +1,5 @@
 backend:
-    name: github-api
+    name: github
     repo: marcnewport/twp-2017 # Path to your Github repository
     branch: master # Branch to update (master by default)
 
