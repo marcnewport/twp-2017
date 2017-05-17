@@ -37,7 +37,7 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Introduction", name: "introduction", widget: "markdown"}
       - {label: "Deliverables", name: "deliverables", widget: "list"}
       - {label: "Website address", name: "website", widget: "string"}
-      - {label: "Category", name: "category", widget: "text"}
+      - {label: "Category", name: "category", widget: "string"}
       - {label: "Main image", name: "main-image", widget: "image"}
       - {label: "Main text", name: "main-text", widget: "markdown"}
       - {label: "Testimonial", name: "testimonial-text", widget: "markdown"}
