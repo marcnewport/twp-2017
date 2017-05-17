@@ -16,7 +16,7 @@ deliverables:
   - Visual Design
   - Creative Direction
 website: 'https://www.lifewithbird.com/'
-category: Shopify
+category: shopify
 main-image: /assets/uploads/project-img-1.jpg
 main-text: >-
   <h3 class=”h6”>Headline goes here</h3>
@@ -33,10 +33,9 @@ testimonial-text: >-
   direction, creativity, and your dedication to delivering true results to your
   clients. As both of our companies continue to grow I want you to know that
   you’ve got our full support.
-testimonial-name:
-  - Harley Finkelstein
-  - COO
-  - Shopify
+testimonial-author: Harley Finkelstein
+testimonial-position: COO
+testimonial-company: Shopify
 desktop-1: /assets/uploads/project-img-2.jpg
 desktop-2: /assets/uploads/project-img-3.jpg
 desktop-text: >-
@@ -71,4 +70,3 @@ mobile-text: >-
   cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
   proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 ---
-
