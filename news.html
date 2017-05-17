@@ -15,14 +15,37 @@ permalink: /news/
 				<svg width="11px" height="7px" class="filter__label-icon"><use xlink:href="#icon-chevron-down"/></svg>
 			</div>
 			<ul>
-				<li><button class="filter__button active" data-filter="all">All articles</button></li>
-				<li><button class="filter__button" data-filter="project">Projects</button></li>
-				<li><button class="filter__button" data-filter="news">News</button></li>
+				{% for filter in site.data.filters.news %}
+					<li><button class="filter__button {% if forloop.first %}active{% endif %}" data-filter="{{ filter.name }}">{{ filter.label }}</button></li>
+				{% endfor %}
 			</ul>
 		</div>
 	</div>
 
-	<div class="card" data-category="project">
+	{% for article in site.news %}
+
+		{% if article.main-image %}
+		<div class="card{% cycle '', ' card--image-right' %}" data-category="{{ article.category }}">
+			<div class="container">
+				<div class="card__image">
+					<img src="{{ article.main-image }}" alt="">
+				</div>
+		{% else %}
+		<div class="card card--image-none" data-category="{{ article.category }}">
+			<div class="container">
+		{% endif %}
+
+				<div class="card__content">
+					<h3 class="h5">{{ article.title }}</h3>
+					<p>{{ article.content | truncatewords: 100 }}</p>
+					<p class="card__link"><a href="{{ article.url | prepend: site.baseurl }}">More</a></p>
+				</div>
+			</div>
+		</div>
+
+	{% endfor %}
+
+	<!-- <div class="card" data-category="project">
 		<div class="container">
 			<div class="card__image">
 				<img src="assets/news-img-1.jpg" alt="">
@@ -79,5 +102,5 @@ permalink: /news/
 				<p class="card__link"><a href="article.html">More</a></p>
 			</div>
 		</div>
-	</div>
+	</div> -->
 </main>

@@ -1,0 +1,21 @@
+---
+layout: default
+---
+
+<main class="main main--article" itemscope="" itemtype="http://schema.org/Article">
+	<div class="container">
+		<div class="main__header-link">
+			<p><a href="news.html">View All News</a></p>
+		</div>
+		<div class="main__title">
+			<h2 class="h3" itemprop="name">{{ page.title }}</h2>
+		</div>
+		<div class="main__details">
+			<p>{{ page.category }}, <span itemprop="author">{{ page.author }}</span></p>
+		</div>
+		<div class="main__content">
+			<img src="{{ page.main-image }}" alt="">
+			{{ content }}
+		</div>
+	</div>
+</main>
