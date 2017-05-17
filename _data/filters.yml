@@ -1,0 +1,12 @@
+# These filters correspond with the category on a work collection item
+works:
+  - {name: "all", label: "All work"}
+  - {name: "plus", label: "Shopify Plus"}
+  - {name: "shopify", label: "Shopify"}
+  - {name: "design", label: "Design Systems"}
+  - {name: "wordpress", label: "Wordpress"}
+
+news:
+  - {name: "all", label: "All work"}
+  - {name: "projects", label: "Projects"}
+  - {name: "news", label: "News"}
