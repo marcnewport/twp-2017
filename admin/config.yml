@@ -29,11 +29,25 @@ collections: # A list of collections the CMS should be able to edit
     folder: "_works" # The path to the folder where the documents are stored
     sort: "date:desc" # Default is title:asc
     create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Body", name: "body", widget: "markdown"}
-      - {label: "Images", name: "images", widget: "image"}
+      - {label: "Subtitle", name: "subtitle", widget: "markdown"}
+      - {label: "Introduction", name: "introduction", widget: "markdown"}
+      - {label: "Deliverables", name: "deliverables", widget: "list"}
+      - {label: "Website address", name: "website", widget: "string"}
+      - {label: "Category", name: "category", widget: "text"}
+      - {label: "Main image", name: "main-image", widget: "image"}
+      - {label: "Main text", name: "main-text", widget: "markdown"}
+      - {label: "Testimonial", name: "testimonial-text", widget: "markdown"}
+      - {label: "Testimonial - author, position, company", name: "testimonial-name", widget: "list"}
+      - {label: "Desktop screenshot 1", name: "desktop-1", widget: "image"}
+      - {label: "Desktop screenshot 2", name: "desktop-2", widget: "image"}
+      - {label: "Desktop screenshot text", name: "desktop-text", widget: "markdown"}
+      - {label: "Mobile screenshot 1", name: "mobile-1", widget: "image"}
+      - {label: "Mobile screenshot 2", name: "mobile-2", widget: "image"}
+      - {label: "Mobile screenshot 3", name: "mobile-3", widget: "image"}
+      - {label: "Mobile screenshot text", name: "mobile-text", widget: "markdown"}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
