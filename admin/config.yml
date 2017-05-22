@@ -19,24 +19,24 @@ collections: # A list of collections the CMS should be able to edit
     fields: # The fields each document in this collection have
       - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Subtitle", name: "subtitle", widget: "markdown", required: false, default: ""}
+      - {label: "Subtitle", name: "subtitle", widget: "markdown", required: false}
       - {label: "Introduction", name: "introduction", widget: "markdown"}
-      - {label: "Deliverables", name: "deliverables", widget: "list", required: false, default: ""}
-      - {label: "Website address", name: "website", widget: "string", required: false, default: ""}
-      - {label: "Category", name: "category", widget: "string", required: true, default: ""}
-      - {label: "Main image", name: "main-image", widget: "image", required: true, default: ""}
+      - {label: "Deliverables", name: "deliverables", widget: "list", required: false}
+      - {label: "Website address", name: "website", widget: "string", required: false}
+      - {label: "Category", name: "category", widget: "string", required: true}
+      - {label: "Main image", name: "main-image", widget: "image", required: true}
       - {label: "Main text", name: "main-text", widget: "markdown"}
-      - {label: "Testimonial", name: "testimonial-text", widget: "markdown", required: false, default: ""}
-      - {label: "Testimonial author", name: "testimonial-author", widget: "string", required: false, default: ""}
-      - {label: "Testimonial position", name: "testimonial-position", widget: "string", required: false, default: ""}
-      - {label: "Testimonial company", name: "testimonial-company", widget: "string", required: false, default: ""}
-      - {label: "Desktop screenshot 1", name: "desktop-1", widget: "image", required: false, default: ""}
-      - {label: "Desktop screenshot 2", name: "desktop-2", widget: "image", required: false, default: ""}
-      - {label: "Desktop screenshot text", name: "desktop-text", widget: "markdown", required: false, default: ""}
-      - {label: "Mobile screenshot 1", name: "mobile-1", widget: "image", required: false, default: ""}
-      - {label: "Mobile screenshot 2", name: "mobile-2", widget: "image", required: false, default: ""}
-      - {label: "Mobile screenshot 3", name: "mobile-3", widget: "image", required: false, default: ""}
-      - {label: "Mobile screenshot text", name: "mobile-text", widget: "markdown", required: false, default: ""}
+      - {label: "Testimonial", name: "testimonial-text", widget: "markdown", required: false}
+      - {label: "Testimonial author", name: "testimonial-author", widget: "string", required: false}
+      - {label: "Testimonial position", name: "testimonial-position", widget: "string", required: false}
+      - {label: "Testimonial company", name: "testimonial-company", widget: "string", required: false}
+      - {label: "Desktop screenshot 1", name: "desktop-1", widget: "image", required: false}
+      - {label: "Desktop screenshot 2", name: "desktop-2", widget: "image", required: false}
+      - {label: "Desktop screenshot text", name: "desktop-text", widget: "markdown", required: false}
+      - {label: "Mobile screenshot 1", name: "mobile-1", widget: "image", required: false}
+      - {label: "Mobile screenshot 2", name: "mobile-2", widget: "image", required: false}
+      - {label: "Mobile screenshot 3", name: "mobile-3", widget: "image", required: false}
+      - {label: "Mobile screenshot text", name: "mobile-text", widget: "markdown", required: false}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
 
@@ -47,11 +47,40 @@ collections: # A list of collections the CMS should be able to edit
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}"
     fields: # The fields each document in this collection have
-      - {label: "Layout", name: "layout", widget: "hidden", default: "post"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "news"}
       - {label: "Title", name: "title", widget: "string", tagname: "h1"}
-      - {label: "Main image", name: "main-image", widget: "image"}
+      - {label: "Main image", name: "main-image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
       - {label: "Category", name: "category", widget: "string"}
       - {label: "Author", name: "author", widget: "string"}
+    meta: # Meta data fields. Just like fields, but without any preview element
+      - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
+
+  - name: "events" # Used in routes, ie.: /admin/collections/:slug/edit
+    label: "Event" # Used in the UI, ie.: "New Post"
+    folder: "_events" # The path to the folder where the documents are stored
+    sort: "date:desc" # Default is title:asc
+    create: true # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields: # The fields each document in this collection have
+      - {label: "Layout", name: "layout", widget: "hidden", default: "event"}
+      - {label: "Title", name: "title", widget: "string", tagname: "h1"}
+      - {label: "Date", name: "event-date", widget: "datetime", format: "ddd d mmmm-h:MMTT"} # https://www.npmjs.com/package/dateformat
+      - {label: "Venue name", name: "venue-name", widget: "string"}
+      - {label: "Venue address", name: "venue-address", widget: "string"}
+      - {label: "Venue state", name: "venue-state", widget: "string"}
+      - {label: "RSVP link", name: "rsvp", widget: "string"}
+      - {label: "Main image", name: "main-image", widget: "image", required: false}
+      - {label: "Standout text", name: "standout", widget: "markdown"}
+      - {label: "Description", name: "description", widget: "markdown"}
+      - label: "Speaker"
+        name: "speaker"
+        widget: "list"
+        fields:
+          - {label: "Image", name: "speaker-image", widget: "image"}
+          - {label: "Name", name: "speaker-name", widget: "string"}
+          - {label: "Position", name: "speaker-position", widget: "string"}
+          - {label: "Company", name: "speaker-company", widget: "string"}
+          - {label: "About", name: "speaker-text", widget: "markdown"}
     meta: # Meta data fields. Just like fields, but without any preview element
       - {label: "Publish Date", name: "date", widget: "datetime", format: "YYYY-MM-DD hh:mm:ss"}
