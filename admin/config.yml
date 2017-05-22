@@ -13,8 +13,7 @@ collections: # A list of collections the CMS should be able to edit
 
   - name: "page"
     label: "Page"
-    editor:
-      preview: false
+    create: true
     files:
       - name: "home"
         label: "Home"
